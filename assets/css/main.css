@@ -12,6 +12,14 @@
 --------------------------------------------------------------*/
 /* Fonts */
 
+
+
+
+
+
+
+
+
 :root {
   --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
@@ -72,6 +80,25 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
 }
+
+.medium-button {
+  background-color: #000; /* Medium's black theme */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.medium-button:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 
 a {
   font-family: "Edu VIC WA NT Hand", cursive;
