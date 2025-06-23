@@ -240,3 +240,98 @@
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
 })();
+
+// Newsletter form submission
+document
+  .getElementById("newsletter-form")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const form = this;
+    const email = form.email.value;
+
+    form.querySelector(".loading").style.display = "block";
+    form.querySelector(".error-message").style.display = "none";
+    form.querySelector(".sent-message").style.display = "none";
+
+    try {
+      const res = await fetch("http://127.0.0.1:5000/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        form.querySelector(".sent-message").style.display = "block";
+
+        // Hide the success message after 10 seconds
+        setTimeout(() => {
+          form.querySelector(".sent-message").style.display = "none";
+        }, 10000);
+
+        form.reset();
+      } else {
+        const data = await res.json();
+        form.querySelector(".error-message").textContent =
+          data.error || "Something went wrong!";
+        form.querySelector(".error-message").style.display = "block";
+      }
+    } catch (error) {
+      form.querySelector(".error-message").textContent = "Network error!";
+      form.querySelector(".error-message").style.display = "block";
+    } finally {
+      form.querySelector(".loading").style.display = "none";
+    }
+  });
+
+// Contact form submission
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const form = this;
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value,
+    };
+
+    form.querySelector(".loading").style.display = "block";
+    form.querySelector(".error-message").style.display = "none";
+    form.querySelector(".sent-message").style.display = "none";
+
+    try {
+      const res = await fetch("http://127.0.0.1:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        form.querySelector(".sent-message").style.display = "block";
+
+        // Hide the success message after 10 seconds
+        setTimeout(() => {
+          form.querySelector(".sent-message").style.display = "none";
+        }, 10000);
+
+        form.reset();
+      } else {
+        const data = await res.json();
+        form.querySelector(".error-message").textContent =
+          data.error || "Something went wrong!";
+        form.querySelector(".error-message").style.display = "block";
+      }
+    } catch (error) {
+      form.querySelector(".error-message").textContent = "Network error!";
+      form.querySelector(".error-message").style.display = "block";
+    } finally {
+      form.querySelector(".loading").style.display = "none";
+    }
+  });

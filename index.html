@@ -103,21 +103,20 @@
               </p>
             </div>
             <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
-              <form
-                action="forms/newsletter.php"
-                method="post"
-                class="php-email-form"
-              >
+              <!-- Newsletter Form -->
+              <form id="newsletter-form" class="php-email-form">
                 <div class="sign-up-form">
                   <input
                     type="email"
-                    placeholder="Email, please! It’s on the website 😉"
                     name="email"
-                  /><input type="submit" value="Subscribe" />
+                    placeholder="Email, please! It’s on the website 😉"
+                    required
+                  />
+                  <input type="submit" value="Subscribe" />
                 </div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
+                <div class="loading" style="display: none">Loading</div>
+                <div class="error-message" style="display: none"></div>
+                <div class="sent-message" style="display: none">
                   Your subscription request has been sent. Thank you!
                 </div>
               </form>
@@ -284,7 +283,7 @@
                 </div>
                 <div>
                   <h4 class="title">
-                    <a href="services-details.html" class="stretched-link"
+                    <a href="#" class="stretched-link"
                       >Frontend Development</a
                     >
                   </h4>
@@ -306,12 +305,12 @@
                 </div>
                 <div>
                   <h4 class="title">
-                    <a href="services-details.html" class="stretched-link"
+                    <a href="#" class="stretched-link"
                       >Backend Development (In Progress)</a
                     >
                   </h4>
                   <p class="description">
-                    REST API development with Node.js & Express, Database setup
+                    REST API development with python, Database setup
                     using MongoDB, Authentication & authorization systems,
                     Third-party API integration.
                   </p>
@@ -327,7 +326,7 @@
                 </div>
                 <div>
                   <h4 class="title">
-                    <a href="services-details.html" class="stretched-link"
+                    <a href="#" class="stretched-link"
                       >Volunteer Projects</a
                     >
                   </h4>
@@ -348,7 +347,7 @@
                 </div>
                 <div>
                   <h4 class="title">
-                    <a href="services-details.html" class="stretched-link"
+                    <a href="#" class="stretched-link"
                       >Web Maintenance & Technical Support</a
                     >
                   </h4>
@@ -365,7 +364,7 @@
                 </div>
                 <div>
                   <h4 class="title">
-                    <a href="services-details.html" class="stretched-link">
+                    <a href="#" class="stretched-link">
                       Beginner Tech Mentoring</a
                     >
                   </h4>
@@ -386,14 +385,14 @@
                 </div>
                 <div>
                   <h4 class="title">
-                    <a href="services-details.html" class="stretched-link"
+                    <a href="#" class="stretched-link"
                       >Story-Driven Content & Creative Writing</a
                     >
                   </h4>
                   <p class="description">
                     Blog/article writing for tech or lifestyle topics,
                     Storytelling for personal or nonprofit websites, Creative
-                    content to make your brand feel human
+                    content to make your brand feel human.
                   </p>
                 </div>
               </div>
@@ -411,7 +410,7 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>Portfolio</h2>
           <a
-            href="https://drive.google.com/file/d/1jhXuOLKftTVK1bvXYRBROidzgNt52oIm/view?usp=sharing"
+            href="https://drive.google.com/file/d/16ZR8Wh5OfjcCi_iWYdV4wSfLCc1svNqv/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-primary"
@@ -446,30 +445,32 @@
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <img
-                  src="assets/img/masonry-portfolio/1.png"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Kimflash trading</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="assets/img/masonry-portfolio/1.png"
-                    title="App 1"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
+              <div class="p1">
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+                >
+                  <img
+                    src="assets/img/masonry-portfolio/1.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Kimflash trading</h4>
+                    <p>Static website for the leading UPS provider</p>
+                    <a
+                      href="assets/img/masonry-portfolio/1.png"
+                      title="App 1"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="kimflash.html"
+                      title="More Details"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
               <!-- End Portfolio Item -->
@@ -478,22 +479,24 @@
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
               >
                 <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
+                  src="assets/img/masonry-portfolio/weather.png"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-info">
                   <h4>Shecodes weather app</h4>
-                  <p>Lorem ipsum, dolor sit</p>
+                  <p>
+                    Type any city name and see today’s weather and the forecast!
+                  </p>
                   <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
+                    href="assets/img/masonry-portfolio/weather.png"
                     title="Product 1"
                     data-gallery="portfolio-gallery-product"
                     class="glightbox preview-link"
                     ><i class="bi bi-zoom-in"></i
                   ></a>
                   <a
-                    href="portfolio-details.html"
+                    href="weatherapp.html"
                     title="More Details"
                     class="details-link"
                     ><i class="bi bi-link-45deg"></i
@@ -506,24 +509,24 @@
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
               >
                 <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg"
+                  src="assets/img/masonry-portfolio/short.PNG"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-info">
                   <h4>Whale- Author chyeon myongkwan</h4>
-                  <p>Lorem ipsum, dolor sit</p>
+                  <p>
+                    Check out the book review that earned me 3rd place in the
+                    Korean Book Review Contest!
+                  </p>
                   <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg"
+                    href="assets/img/masonry-portfolio/short.PNG"
                     title="Branding 1"
                     data-gallery="portfolio-gallery-branding"
                     class="glightbox preview-link"
                     ><i class="bi bi-zoom-in"></i
                   ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
+                  <a href="whale.html" title="More Details" class="details-link"
                     ><i class="bi bi-link-45deg"></i
                   ></a>
                 </div>
@@ -540,7 +543,7 @@
                 />
                 <div class="portfolio-info">
                   <h4>MUDISC, AAHCC</h4>
-                  <p>Coming Soon</p>
+                  <p>Project built as part of my apprenticeship training.</p>
                   <a
                     href="assets/img/masonry-portfolio/11.jpg"
                     title="App 2"
@@ -548,10 +551,7 @@
                     class="glightbox preview-link"
                     ><i class="bi bi-zoom-in"></i
                   ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
+                  <a href="biz.html" title="More Details" class="details-link"
                     ><i class="bi bi-link-45deg"></i
                   ></a>
                 </div>
@@ -562,24 +562,24 @@
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
               >
                 <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg"
+                  src="assets/img/masonry-portfolio/poem.png"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-info">
-                  <h4>AI code generator</h4>
-                  <p>Lorem ipsum, dolor sit</p>
+                  <h4>AI poem generator</h4>
+                  <p>
+                    Just enter a few words, and watch it turn into a poem!
+                    (Perfect for sending to your partner 😅)
+                  </p>
                   <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg"
+                    href="assets/img/masonry-portfolio/poem.png"
                     title="Product 2"
                     data-gallery="portfolio-gallery-product"
                     class="glightbox preview-link"
                     ><i class="bi bi-zoom-in"></i
                   ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
+                  <a href="poem.html" title="More Details" class="details-link"
                     ><i class="bi bi-link-45deg"></i
                   ></a>
                 </div>
@@ -590,22 +590,22 @@
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
               >
                 <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg"
+                  src="assets/img/masonry-portfolio/write1.png"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-info">
-                  <h4>Pagume</h4>
-                  <p>Lorem ipsum, dolor sit</p>
+                  <h4>Just write!</h4>
+                  <p>Stories I wrote for contests and personal use.</p>
                   <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg"
+                    href="assets/img/masonry-portfolio/write1.png"
                     title="Branding 2"
                     data-gallery="portfolio-gallery-branding"
                     class="glightbox preview-link"
                     ><i class="bi bi-zoom-in"></i
                   ></a>
                   <a
-                    href="portfolio-details.html"
+                    href="pagume.html"
                     title="More Details"
                     class="details-link"
                     ><i class="bi bi-link-45deg"></i
@@ -624,7 +624,9 @@
                 />
                 <div class="portfolio-info">
                   <h4>Mobile application testing</h4>
-                  <p>Lorem ipsum, dolor sit</p>
+                  <p>
+                    Thorough testing was conducted both before and after launch.
+                  </p>
                   <a
                     href="assets/img/masonry-portfolio/5.png"
                     title="App 3"
@@ -633,7 +635,7 @@
                     ><i class="bi bi-zoom-in"></i
                   ></a>
                   <a
-                    href="portfolio-details.html"
+                    href="forward.html"
                     title="More Details"
                     class="details-link"
                     ><i class="bi bi-link-45deg"></i
@@ -646,52 +648,21 @@
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
               >
                 <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg"
+                  src="assets/img/masonry-portfolio/clock.png"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-info">
                   <h4>World Clock</h4>
-                  <p>Lorem ipsum, dolor sit</p>
+                  <p>Want to know the time somewhere? Type a city name!</p>
                   <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg"
+                    href="assets/img/masonry-portfolio/clock.png"
                     title="Product 3"
                     data-gallery="portfolio-gallery-product"
                     class="glightbox preview-link"
                     ><i class="bi bi-zoom-in"></i
                   ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Jewel in the desert</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg"
-                    title="Branding 2"
-                    data-gallery="portfolio-gallery-branding"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
+                  <a href="clock.html" title="More Details" class="details-link"
                     ><i class="bi bi-link-45deg"></i
                   ></a>
                 </div>
@@ -994,13 +965,8 @@
             </div>
 
             <div class="col-lg-6">
-              <form
-                action="forms/contact.php"
-                method="post"
-                class="php-email-form"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
+              <!-- Contact Form -->
+              <form id="contact-form" class="php-email-form">
                 <div class="row gy-4">
                   <div class="col-md-6">
                     <input
@@ -1008,47 +974,42 @@
                       name="name"
                       class="form-control"
                       placeholder="Your Name"
-                      required=""
+                      required
                     />
                   </div>
-
                   <div class="col-md-6">
                     <input
                       type="email"
-                      class="form-control"
                       name="email"
+                      class="form-control"
                       placeholder="Your Email"
-                      required=""
+                      required
                     />
                   </div>
-
                   <div class="col-12">
                     <input
                       type="text"
-                      class="form-control"
                       name="subject"
+                      class="form-control"
                       placeholder="Subject"
-                      required=""
+                      required
                     />
                   </div>
-
                   <div class="col-12">
                     <textarea
-                      class="form-control"
                       name="message"
+                      class="form-control"
                       rows="6"
                       placeholder="Message"
-                      required=""
+                      required
                     ></textarea>
                   </div>
-
                   <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">
+                    <div class="loading" style="display: none">Loading</div>
+                    <div class="error-message" style="display: none"></div>
+                    <div class="sent-message" style="display: none">
                       Your message has been sent. Thank you!
                     </div>
-
                     <button type="submit">Send Message</button>
                   </div>
                 </div>

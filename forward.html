@@ -1,13 +1,13 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Blog - Bethelhem Daniel</title>
+    <title>Portfolio Details - Bethelhem Daniel</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Favicons -->
     <link href="assets/img/cool.png" rel="icon" />
@@ -49,7 +49,7 @@
   ======================================================== -->
   </head>
 
-  <body class="blog-page">
+  <body class="portfolio-details-page">
     <header id="header" class="header d-flex align-items-center sticky-top">
       <div
         class="container-fluid position-relative d-flex align-items-center justify-content-between"
@@ -61,7 +61,7 @@
             <li><a href="index.html#services">Services</a></li>
             <li><a href="index.html#portfolio">Portfolio</a></li>
 
-            <li><a href="blog.html" class="active">🌟Blog🌟</a></li>
+            <li><a href="blog.html">🌟Blog🌟</a></li>
 
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
@@ -87,11 +87,10 @@
           <div class="container">
             <div class="row d-flex justify-content-center text-center">
               <div class="col-lg-8">
-                <h1>Blog</h1>
+                <h1>Portfolio Details</h1>
                 <p class="mb-0">
-                  Hey there! This is where I share my thoughts, stories, and
-                  cool stuff about tech, life, and whatever else catches my
-                  interest. Grab a coffee, get comfy, and enjoy the read!
+                  A curated blend of client projects, personal creations, and
+                  stories that reflect my diverse skills and passions.
                 </p>
               </div>
             </div>
@@ -101,73 +100,88 @@
           <div class="container">
             <ol>
               <li><a href="index.html">Home</a></li>
-              <li class="current">Blog</li>
+              <li class="current">Portfolio Details</li>
             </ol>
           </div>
         </nav>
       </div>
       <!-- End Page Title -->
 
-      <!-- Blog Posts Section -->
-      <section id="blog-posts" class="blog-posts section py-5">
-        <div class="container">
-          <div class="row gy-4">
-            <!-- Blog Post 1 -->
-            <div class="col-lg-4 blog-post-item">
-              <article>
-                <div class="post-img">
-                  <img
-                    src="assets/img/blog/bill.png"
-                    alt=""
-                    class="img-fluid"
-                  />
+      <!-- Portfolio Details Section -->
+
+      <section id="portfolio-details" class="portfolio-details section">
+        
+          <div class="container" data-aos="fade-up">
+            <div class="portfolio-details-slider swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "navigation": {
+                    "nextEl": ".swiper-button-next",
+                    "prevEl": ".swiper-button-prev"
+                  },
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/6.png" alt="" />
                 </div>
-                <p class="post-category">Life style</p>
-                <h2 class="title">
-                  <a
-                    href="https://medium.com/@bethelhemdanielfenta"
-                    target="_blank"
-                    >Bethelhem, Do you want to meet Bill Gates?</a
-                  >
-                </h2>
-                <div class="d-flex align-items-center">
-                  <img
-                    src="assets/img/blog/kitty.jpg"
-                    alt=""
-                    class="img-fluid post-author-img flex-shrink-0"
-                  />
-                  <a href="https://medium.com/@bethelhemdanielfenta/bethelhem-do-you-want-to-meet-bill-gates-cc6f41f06bdd" target="_blank"><button class="medium-button">Read more on Medium</button></a>
+
+                
+              </div>
+
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="row justify-content-between gy-4 mt-4">
+              <div class="col-lg-8" data-aos="fade-up">
+                <div class="portfolio-description">
+                  <h2>Forward Logistics Technologies PLC</h2>
+                  <p>
+                    As a contract worker, I was assigned to review four mobile applications: Forward Consignor, Forward Driver, Forward Transporter, and the Sales and Marketing app. My responsibilities included thorough user-side testing for each application and the preparation of comprehensive user manuals
+                  </p>
                 </div>
-              </article>
+              </div>
+
+              <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="portfolio-info">
+                  <h3>Project information</h3>
+                  <ul>
+                    <li><strong>Category</strong> Web design</li>
+                    <li><strong>Client</strong> KIM FLASH TRADING</li>
+                    <li><strong>Project date</strong> Summer 2022</li>
+                    <li>
+                      <strong>Project URL</strong>
+                      <a href="https://play.google.com/store/apps/details?id=com.forwardlogisticset.forward_driver&hl=en-US" target="_blank">Forward Driver</a>
+                      <a href="https://play.google.com/store/apps/details?id=com.forwardlogisticset.forward_consignor&hl=en-US" target="_blank">Forward Consignor</a>
+                      <a href="https://play.google.com/store/apps/details?id=com.forwardlogisticset.forward_transporter&hl=en-US" target="_blank">Forward Transporter</a>
+                    </li>
+                    <li>
+                      <a href="https://www.forwardlogisticsethiopia.com/" target="_blank" class="btn-visit align-self-start"
+                        >Visit Website</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Blog Pagination Section -->
-      <section id="blog-pagination" class="blog-pagination section py-4">
-        <div class="container">
-          <div class="d-flex justify-content-center">
-            <ul id="pagination-list">
-              <li>
-                <a href="#" data-action="prev"
-                  ><i class="bi bi-chevron-left"></i
-                ></a>
-              </li>
-              <li><a href="#" data-page="1" class="active">1</a></li>
-              <li><a href="#" data-page="2">2</a></li>
-              <li><a href="#" data-page="3">3</a></li>
-              <li>
-                <a href="#" data-action="next"
-                  ><i class="bi bi-chevron-right"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- /Blog Pagination Section -->
+      <!-- /Portfolio Details Section -->
     </main>
 
     <footer id="footer" class="footer position-relative light-background">
@@ -273,63 +287,6 @@
 
     <!-- Preloader -->
     <div id="preloader"></div>
-
-    <script>
-      const posts = document.querySelectorAll(".blog-post-item");
-      const postsPerPage = 3;
-      let currentPage = 1;
-      const totalPages = Math.ceil(posts.length / postsPerPage);
-
-      function showPage(page) {
-        posts.forEach((post, index) => {
-          if (
-            index >= (page - 1) * postsPerPage &&
-            index < page * postsPerPage
-          ) {
-            post.style.display = "block";
-          } else {
-            post.style.display = "none";
-          }
-        });
-
-        // Update active page number
-        document
-          .querySelectorAll("#pagination-list a[data-page]")
-          .forEach((link) => {
-            if (parseInt(link.dataset.page) === page) {
-              link.classList.add("active");
-            } else {
-              link.classList.remove("active");
-            }
-          });
-      }
-
-      document
-        .querySelector("#pagination-list")
-        .addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = e.target.closest("a");
-          if (!target) return;
-
-          if (target.dataset.action === "prev") {
-            if (currentPage > 1) {
-              currentPage--;
-              showPage(currentPage);
-            }
-          } else if (target.dataset.action === "next") {
-            if (currentPage < totalPages) {
-              currentPage++;
-              showPage(currentPage);
-            }
-          } else if (target.dataset.page) {
-            currentPage = parseInt(target.dataset.page);
-            showPage(currentPage);
-          }
-        });
-
-      // Initial load
-      showPage(currentPage);
-    </script>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
